@@ -1,0 +1,25 @@
+.circle {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.on {
+  background-color: rgb(27, 221, 27);
+}
+
+.off {
+  background-color: red;
+}
+
+.my-card {
+  background-color: whitesmoke;
+}
+
+.col-centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: table-cell;
+}
