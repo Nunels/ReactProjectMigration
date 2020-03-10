@@ -34,18 +34,13 @@ function App() {
           >
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <Link to="/lightswitch" className="nav-link">
-                  Interruttore
+                <Link to="/monitor" className="nav-link">
+                  Monitor
                 </Link>
               </li>
               <li className="nav-item active">
-                <Link to="/users" className="nav-link">
-                  Utenti
-                </Link>
-              </li>
-              <li className="nav-item active">
-                <Link to="/todos" className="nav-link">
-                  Todos
+                <Link to="/richieste" className="nav-link">
+                  Richieste
                 </Link>
               </li>
             </ul>

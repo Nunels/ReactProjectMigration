@@ -11,9 +11,9 @@ export class MonitorServices extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      downloadStatus: true,
-      categoriesStatus: true,
-      monitorStatus: true
+      downloadStatus: false,
+      categoriesStatus: false,
+      monitorStatus: false
     };
   }
 
