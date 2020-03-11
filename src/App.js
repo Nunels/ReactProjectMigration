@@ -4,7 +4,13 @@ import "./App.css";
 import { RichiestaList } from "./components/richiesta-list/RichiestaListComponent";
 import { MonitorServices } from "./components/monitor-services/MonitorServicesComponent";
 
-import { Link, BrowserRouter, Route, Switch } from "react-router-dom";
+import {
+  Link,
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
 
 function App() {
   return (
@@ -13,8 +19,8 @@ function App() {
         <nav className="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
           <img src={logo} className="App-logo" alt="logo" />
 
-          <a className="navbar-brand" href="#">
-            Navbar
+          <a className="navbar-brand" href="/">
+            <b>Monitoraggio PagoPa</b>
           </a>
           <button
             className="navbar-toggler"
@@ -34,7 +40,7 @@ function App() {
           >
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <Link to="/monitor" className="nav-link">
+                <Link to="/" className="nav-link">
                   Monitor
                 </Link>
               </li>
@@ -47,8 +53,15 @@ function App() {
           </div>
         </nav>
         <div className="container">
-          <MonitorServices />
-          <RichiestaList />
+          <Switch>
+            <Route exact path="/">
+              <MonitorServices />
+            </Route>
+            <Route path="/richieste">
+              <RichiestaList />
+            </Route>
+            <Redirect to="/" />
+          </Switch>
         </div>
       </BrowserRouter>
     </div>
