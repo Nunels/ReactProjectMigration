@@ -11,6 +11,7 @@ import {
   Switch,
   Redirect
 } from "react-router-dom";
+import { RichiestaListPrime } from "./components/richiesta-list-prime/RichiestaListPrime";
 
 function App() {
   return (
@@ -49,6 +50,11 @@ function App() {
                   Richieste
                 </Link>
               </li>
+              <li className="nav-item active">
+                <Link to="/richieste2" className="nav-link">
+                  Richieste2
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -57,9 +63,14 @@ function App() {
             <Route exact path="/">
               <MonitorServices />
             </Route>
-            <Route path="/richieste">
+            <Route exact path="/richieste">
               <RichiestaList />
             </Route>
+            <Route
+              exact
+              path="/richieste2"
+              component={RichiestaListPrime}
+            />
             <Redirect to="/" />
           </Switch>
         </div>
