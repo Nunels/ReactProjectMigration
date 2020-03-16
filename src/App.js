@@ -4,6 +4,10 @@ import "./App.css";
 import { RichiestaList } from "./components/richiesta-list/RichiestaListComponent";
 import { MonitorServices } from "./components/monitor-services/MonitorServicesComponent";
 
+import "primereact/resources/themes/nova-light/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+
 import {
   Link,
   BrowserRouter,
@@ -58,7 +62,7 @@ function App() {
             </ul>
           </div>
         </nav>
-        <div className="container">
+        <div className="container col-lg-11">
           <Switch>
             <Route exact path="/">
               <MonitorServices />

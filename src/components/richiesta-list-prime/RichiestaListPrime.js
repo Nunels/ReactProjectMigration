@@ -17,9 +17,21 @@ export class RichiestaListPrime extends React.Component {
 
   render() {
     return (
-      <DataTable value={this.state.richieste}>
-        <Column field="idRichiesta" header="idRichiesta" />
-        <Column field="idPagatore" header="idPagatore" />
+      <DataTable
+        value={this.state.richieste}
+        paginator={true}
+        rows={10}
+      >
+        <Column
+          field="idRichiesta"
+          header="idRichiesta"
+          style={{ width: "7em" }}
+        />
+        <Column
+          field="idPagatore"
+          header="idPagatore"
+          style={{ width: "11em" }}
+        />
         <Column field="idDominio" header="idDominio" />
         <Column field="dataRichiesta" header="dataRichiesta" />
         <Column field="codContesto" header="codContesto" />
