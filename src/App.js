@@ -62,7 +62,7 @@ function App() {
             </ul>
           </div>
         </nav>
-        <div className="container col-lg-11">
+        <div className="container ">
           <Switch>
             <Route exact path="/">
               <MonitorServices />
