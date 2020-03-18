@@ -1,9 +1,12 @@
 import React from "react";
+//prime
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Paginator } from "primereact/paginator";
 import { Button } from "primereact/button";
+//services
 import { list } from "../../services/service-status.service";
+import { download } from "../../services/download.service";
 
 export class RichiestaListPrime extends React.Component {
   constructor(props) {
@@ -20,6 +23,7 @@ export class RichiestaListPrime extends React.Component {
   };
   handleDownloadButtonClick = () => {
     console.log(this.state.richiesteSelezionate);
+    download().then();
   };
 
   render() {
